@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegupathi - Backend Engineer Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      background-color: #f3f4f6;
+      line-height: 1.45;
+      font-size: 13.5px;
+    }
+
+    /* Floating Action Bar */
+    .action-bar {
+      position: sticky;
+      top: 0;
+      background: #1e293b;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+    .action-bar .info-text {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .action-bar .info-text span {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+    .btn-download {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s ease;
+    }
+    .btn-download:hover {
+      background: #1d4ed8;
+    }
+
+    /* Page container */
+    .resume-page {
+      max-width: 820px;
+      margin: 28px auto 40px auto;
+      background: #ffffff;
+      padding: 40px 48px;
+      border-radius: 4px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      font-size: 12.5px;
+      color: #475569;
+    }
+    .contact-info span {
+      display: inline-flex;
+      align-items: center;
+    }
+    .contact-info a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    .editable-hint {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      border: 1px dashed #f59e0b;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    p {
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 6px;
+    }
+
+    /* Skills list */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .skill-item {
+      font-size: 13px;
+      color: #334155;
+    }
+    .skill-category {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* Projects & Experience */
+    .entry {
+      margin-bottom: 11px;
+    }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .entry-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .entry-tech {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2563eb;
+      font-style: italic;
+    }
+    .entry-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    ul {
+      margin-left: 18px;
+      color: #334155;
+    }
+    li {
+      margin-bottom: 3px;
+      font-size: 12.8px;
+    }
+    li strong {
+      color: #0f172a;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: transparent;
+        font-size: 12.5px;
+      }
+      .no-print, .action-bar {
+        display: none !important;
+      }
+      .resume-page {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+        border-radius: 0;
+      }
+      .editable-hint {
+        background: transparent;
+        border: none;
+        color: inherit;
+        padding: 0;
+      }
+      @page {
+        size: A4;
+        margin: 12mm 14mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar for Easy PDF Export -->
+  <div class="action-bar no-print">
+    <div class="info-text">
+      💡 <b>Tip:</b> பிரவுசரில் விவரங்களை நேரடியாக கிளிக் செய்து Edit செய்யலாம். முடித்ததும் <span>"Save / Download as PDF"</span> கொடுங்கள்.
+    </div>
+    <button class="btn-download" onclick="window.print()">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"></path></svg>
+      Save / Download as PDF
+    </button>
+  </div>
+
+  <div class="resume-page" contenteditable="true" spellcheck="false">
+    <!-- Header -->
+    <header>
+      <h1>VEGUPATHIRAJAN GOTHANDRAMAN</h1>
+      <div class="subtitle">Backend Engineer | Python • FastAPI • Distributed Systems • AI Voice Integrations</div>
+      <div class="contact-info">
+        <span>📍 Tamil Nadu, India</span>
+        <span>•</span>
+        <span>📧 <a href="mailto:vegupathi666@gmail.com">vegupathi666@gmail.com</a></span>
+        <span>•</span>
+        <span>📞 <a href="tel:+919360206902">+91 93602 06902</a></span>
+        <span>•</span>
+        <span>🔗 <a href="https://www.linkedin.com/in/vegupathi-gothandaraman-voimedu/" target="_blank">linkedin.com/in/vegupathi-gothandaraman-voimedu</a></span>
+        <span>•</span>
+        <span>💻 <a href="https://github.com/vegudev" target="_blank">github.com/vegudev</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Detail-oriented and execution-driven <strong>Backend Engineer</strong> with solid engineering fundamentals and hands-on expertise in <strong>Python (FastAPI, Django)</strong>, RESTful APIs, real-time streaming protocols (<strong>WebSockets</strong>), and database management (<strong>PostgreSQL, Redis</strong>). Proven capability in architecting low-latency microservices, integrating Large Language Model (LLM) voice workflows (Speech-to-Text, Text-to-Speech), and deploying containerized applications with <strong>Docker and Cloud services</strong>. Passionate about building highly reliable, production-ready systems for conversational AI and sales automation platforms.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2>Core Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><span class="skill-category">Backend & Languages:</span> Python (FastAPI, Django, Flask, Asyncio), JavaScript (ES6+), SQL, Bash scripting</div>
+        <div class="skill-item"><span class="skill-category">Real-Time & Streaming:</span> WebSockets, Asynchronous Event Loops, RESTful APIs, WebRTC concepts, Webhooks</div>
+        <div class="skill-item"><span class="skill-category">AI & Voice Integration:</span> OpenAI / Gemini APIs, Speech-to-Text (Whisper / STT), Text-to-Speech (TTS), Prompt Engineering, AI Agents</div>
+        <div class="skill-item"><span class="skill-category">Databases & Queues:</span> PostgreSQL, Redis (Caching & Pub/Sub), Celery Distributed Queues, MySQL, MongoDB</div>
+        <div class="skill-item"><span class="skill-category">DevOps & Cloud:</span> Docker, Kubernetes (Basics), AWS (EC2, S3), Git/GitHub, CI/CD Pipelines, Linux/Unix</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Featured Technical Projects</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Real-Time Multilingual Conversational AI Agent Backend</span>
+          <span class="entry-tech">FastAPI, WebSockets, Redis, OpenAI/Gemini API, Whisper STT</span>
+        </div>
+        <ul>
+          <li>Designed and implemented an asynchronous backend service handling bidirectional real-time audio and text streaming via <strong>WebSockets</strong> with sub-second response latency.</li>
+          <li>Integrated Speech-to-Text (Whisper/STT) and low-latency Text-to-Speech (TTS) pipelines to enable natural, human-sounding voice conversations across Indian language contexts.</li>
+          <li>Leveraged <strong>Redis</strong> for stateful session persistence and conversation context management, enabling robust multi-turn dialogues and dynamic objection handling.</li>
+          <li>Engineered automated lead-routing logic to trigger real-time human handoffs when high-intent customer responses are detected.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Automated Lead Qualification & Campaign Orchestration API</span>
+          <span class="entry-tech">Python, Django REST Framework, PostgreSQL, Celery, Redis, Docker</span>
+        </div>
+        <ul>
+          <li>Engineered a scalable backend microservice managing outbound customer contact campaigns, contact lists, and automated call dispatching.</li>
+          <li>Utilized <strong>Celery & Redis</strong> for distributed asynchronous task execution, handling 10,000+ daily campaign records and telemetry updates without system bottlenecks.</li>
+          <li>Developed robust webhook endpoints to consume telephony call event logs, track call outcomes, and generate structured client analytics reports.</li>
+          <li>Containerized services using <strong>Docker</strong> to ensure 100% environment parity across staging and production deployments.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">High-Performance Telephony & Event Observability Service</span>
+          <span class="entry-tech">FastAPI, PostgreSQL, WebSockets, Docker, Prometheus / Logging</span>
+        </div>
+        <ul>
+          <li>Developed backend middleware to capture live call telemetry, SIP/call status events, and latency metrics across communication pipelines.</li>
+          <li>Implemented structured logging, error alerting, and health check monitoring to diagnose and resolve production exceptions rapidly.</li>
+          <li>Optimized database queries and PostgreSQL index strategies, reducing API endpoint response times by 35%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Backend Developer / Freelance Software Engineer</span>
+          <span class="entry-date">2023 – Present</span>
+        </div>
+        <div class="entry-tech" style="margin-bottom: 3px;">Remote • Client Solutions & Backend Architecture</div>
+        <ul>
+          <li>Architected and delivered custom backend services, RESTful APIs, and full-stack web applications for commercial clients.</li>
+          <li>Implemented secure token-based authentication (JWT, OAuth2) and role-based access control (RBAC) ensuring strict client data isolation.</li>
+          <li>Resolved production exceptions, diagnosed concurrency bottlenecks, and optimized server configurations for high throughput.</li>
+          <li>Maintained an execution mindset by translating business requirements into clean, testable, and maintainable Python code.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Diploma in Computer Science</span>
+          <span class="entry-date">2022 – 2024</span>
+        </div>
+        <div style="font-size: 12.5px; color: #64748b;">Anna University / Affiliated College, Tamil Nadu, India</div>
+      </div>
+    </section>
+
+    <!-- Key Strengths -->
+    <section>
+      <h2>Key Strengths</h2>
+      <ul>
+        <li><strong>High Ownership:</strong> Self-driven engineer who takes complete accountability for feature reliability from development to production monitoring.</li>
+        <li><strong>Fast Learner:</strong> Proven ability to quickly master new cloud stacks, real-time protocols (WebSockets/WebRTC), and AI voice frameworks.</li>
+        <li><strong>Clear Communicator:</strong> Seamlessly collaborates with product, operations, and technical teams to deliver practical customer solutions.</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>
