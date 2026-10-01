@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vegupathi - Backend Engineer Resume</title>
+  <title>Vegupathirajan Gothandaraman - Resume</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,19 +12,19 @@
     }
     body {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-      color: #222;
-      background-color: #f3f4f6;
-      line-height: 1.45;
-      font-size: 13.5px;
+      color: #1e293b;
+      background-color: #f1f5f9;
+      line-height: 1.35;
+      font-size: 11.5px;
     }
 
     /* Floating Action Bar */
     .action-bar {
       position: sticky;
       top: 0;
-      background: #1e293b;
+      background: #0f172a;
       color: #fff;
-      padding: 12px 24px;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,7 +32,7 @@
       z-index: 1000;
     }
     .action-bar .info-text {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
     }
     .action-bar .info-text span {
@@ -43,148 +43,139 @@
       background: #2563eb;
       color: #fff;
       border: none;
-      padding: 10px 20px;
-      font-size: 14px;
+      padding: 8px 18px;
+      font-size: 13px;
       font-weight: 600;
       border-radius: 6px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       transition: background 0.2s ease;
     }
     .btn-download:hover {
       background: #1d4ed8;
     }
 
-    /* Page container */
+    /* Single A4 Page Container */
     .resume-page {
-      max-width: 820px;
-      margin: 28px auto 40px auto;
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 20px auto;
       background: #ffffff;
-      padding: 40px 48px;
-      border-radius: 4px;
+      padding: 12mm 16mm 10mm 16mm;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
     }
 
     /* Header */
     header {
       border-bottom: 2px solid #2563eb;
-      padding-bottom: 14px;
-      margin-bottom: 16px;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
       text-align: center;
     }
     h1 {
-      font-size: 26px;
-      font-weight: 700;
+      font-size: 21px;
+      font-weight: 800;
       letter-spacing: 0.5px;
       color: #0f172a;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .subtitle {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 12.5px;
+      font-weight: 700;
       color: #2563eb;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
     .contact-info {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      font-size: 12.5px;
+      gap: 10px;
+      font-size: 11px;
       color: #475569;
-    }
-    .contact-info span {
-      display: inline-flex;
-      align-items: center;
     }
     .contact-info a {
       color: #0284c7;
       text-decoration: none;
-    }
-    .editable-hint {
-      background: #fef3c7;
-      color: #92400e;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 11px;
-      border: 1px dashed #f59e0b;
+      font-weight: 500;
     }
 
     /* Sections */
     section {
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
     h2 {
-      font-size: 13.5px;
-      font-weight: 700;
+      font-size: 11.5px;
+      font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
       letter-spacing: 0.8px;
       border-bottom: 1px solid #cbd5e1;
-      padding-bottom: 3px;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
     }
     p {
       color: #334155;
       text-align: justify;
-      margin-bottom: 6px;
+      line-height: 1.35;
+      font-size: 11px;
     }
 
     /* Skills list */
     .skills-grid {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 2.5px;
     }
     .skill-item {
-      font-size: 13px;
+      font-size: 11px;
       color: #334155;
+      line-height: 1.3;
     }
     .skill-category {
       font-weight: 700;
       color: #0f172a;
     }
 
-    /* Projects & Experience */
+    /* Projects & Experience Entries */
     .entry {
-      margin-bottom: 11px;
+      margin-bottom: 6px;
     }
     .entry-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
     .entry-title {
-      font-size: 13.5px;
+      font-size: 11.5px;
       font-weight: 700;
       color: #0f172a;
     }
     .entry-tech {
-      font-size: 12px;
+      font-size: 10.5px;
       font-weight: 600;
       color: #2563eb;
       font-style: italic;
     }
     .entry-date {
-      font-size: 12px;
+      font-size: 10.5px;
       font-weight: 600;
       color: #64748b;
       white-space: nowrap;
     }
     ul {
-      margin-left: 18px;
+      margin-left: 15px;
       color: #334155;
     }
     li {
-      margin-bottom: 3px;
-      font-size: 12.8px;
+      margin-bottom: 1.5px;
+      font-size: 10.8px;
+      line-height: 1.35;
     }
     li strong {
       color: #0f172a;
@@ -194,27 +185,24 @@
     @media print {
       body {
         background: transparent;
-        font-size: 12.5px;
+        font-size: 11px;
       }
       .no-print, .action-bar {
         display: none !important;
       }
       .resume-page {
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-        max-width: 100%;
-        border-radius: 0;
-      }
-      .editable-hint {
-        background: transparent;
-        border: none;
-        color: inherit;
-        padding: 0;
+        margin: 0 !important;
+        padding: 8mm 12mm 6mm 12mm !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        min-height: 100% !important;
+        max-height: 100% !important;
+        border-radius: 0 !important;
+        page-break-inside: avoid !important;
       }
       @page {
-        size: A4;
-        margin: 12mm 14mm;
+        size: A4 portrait;
+        margin: 0;
       }
     }
   </style>
@@ -224,27 +212,27 @@
   <!-- Top Action Bar for Easy PDF Export -->
   <div class="action-bar no-print">
     <div class="info-text">
-      💡 <b>Tip:</b> பிரவுசரில் விவரங்களை நேரடியாக கிளிக் செய்து Edit செய்யலாம். முடித்ததும் <span>"Save / Download as PDF"</span> கொடுங்கள்.
+      💡 <b>Print Tip:</b> Print விண்டோவில் <b>More settings &rarr; "Headers and footers"</b> அன்செக் (Uncheck) செய்யவும் (Date & URL நீக்க).
     </div>
     <button class="btn-download" onclick="window.print()">
-      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"></path></svg>
-      Save / Download as PDF
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"></path></svg>
+      Save / Download as Single Page PDF
     </button>
   </div>
 
   <div class="resume-page" contenteditable="true" spellcheck="false">
     <!-- Header -->
     <header>
-      <h1>VEGUPATHIRAJAN GOTHANDRAMAN</h1>
-      <div class="subtitle">Backend Engineer | Python • FastAPI • Distributed Systems • AI Voice Integrations</div>
+      <h1>VEGUPATHIRAJAN GOTHANDARAMAN</h1>
+      <div class="subtitle">Junior Python Developer | AI Integrations • Automation • Web Development</div>
       <div class="contact-info">
-        <span>📍 Tamil Nadu, India</span>
+        <span>📍 Chennai, Tamil Nadu</span>
         <span>•</span>
         <span>📧 <a href="mailto:vegupathi666@gmail.com">vegupathi666@gmail.com</a></span>
         <span>•</span>
         <span>📞 <a href="tel:+919360206902">+91 93602 06902</a></span>
         <span>•</span>
-        <span>🔗 <a href="https://www.linkedin.com/in/vegupathi-gothandaraman-voimedu/" target="_blank">linkedin.com/in/vegupathi-gothandaraman-voimedu</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/vegupathi-g/" target="_blank">linkedin.com/in/vegupathi-g</a></span>
         <span>•</span>
         <span>💻 <a href="https://github.com/vegudev" target="_blank">github.com/vegudev</a></span>
       </div>
@@ -254,7 +242,7 @@
     <section>
       <h2>Professional Summary</h2>
       <p>
-        Detail-oriented and execution-driven <strong>Backend Engineer</strong> with solid engineering fundamentals and hands-on expertise in <strong>Python (FastAPI, Django)</strong>, RESTful APIs, real-time streaming protocols (<strong>WebSockets</strong>), and database management (<strong>PostgreSQL, Redis</strong>). Proven capability in architecting low-latency microservices, integrating Large Language Model (LLM) voice workflows (Speech-to-Text, Text-to-Speech), and deploying containerized applications with <strong>Docker and Cloud services</strong>. Passionate about building highly reliable, production-ready systems for conversational AI and sales automation platforms.
+        Motivated and detail-oriented <strong>Junior Python Developer</strong> with practical experience creating automation tools, integrating Generative AI APIs (Google Gemini, OpenAI), and developing clean, responsive business websites. Skilled in building intelligent document search assistants (RAG with FAISS), automating business tasks with Python, and deploying interactive mobile-first catalogue websites with direct WhatsApp enquiry integration for retail stores. Solid foundational knowledge of Git, GitHub, and cloud deployment on AWS EC2. Eager to contribute to a collaborative engineering team as an Entry-Level Developer.
       </p>
     </section>
 
@@ -262,54 +250,11 @@
     <section>
       <h2>Core Technical Skills</h2>
       <div class="skills-grid">
-        <div class="skill-item"><span class="skill-category">Backend & Languages:</span> Python (FastAPI, Django, Flask, Asyncio), JavaScript (ES6+), SQL, Bash scripting</div>
-        <div class="skill-item"><span class="skill-category">Real-Time & Streaming:</span> WebSockets, Asynchronous Event Loops, RESTful APIs, WebRTC concepts, Webhooks</div>
-        <div class="skill-item"><span class="skill-category">AI & Voice Integration:</span> OpenAI / Gemini APIs, Speech-to-Text (Whisper / STT), Text-to-Speech (TTS), Prompt Engineering, AI Agents</div>
-        <div class="skill-item"><span class="skill-category">Databases & Queues:</span> PostgreSQL, Redis (Caching & Pub/Sub), Celery Distributed Queues, MySQL, MongoDB</div>
-        <div class="skill-item"><span class="skill-category">DevOps & Cloud:</span> Docker, Kubernetes (Basics), AWS (EC2, S3), Git/GitHub, CI/CD Pipelines, Linux/Unix</div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section>
-      <h2>Featured Technical Projects</h2>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Real-Time Multilingual Conversational AI Agent Backend</span>
-          <span class="entry-tech">FastAPI, WebSockets, Redis, OpenAI/Gemini API, Whisper STT</span>
-        </div>
-        <ul>
-          <li>Designed and implemented an asynchronous backend service handling bidirectional real-time audio and text streaming via <strong>WebSockets</strong> with sub-second response latency.</li>
-          <li>Integrated Speech-to-Text (Whisper/STT) and low-latency Text-to-Speech (TTS) pipelines to enable natural, human-sounding voice conversations across Indian language contexts.</li>
-          <li>Leveraged <strong>Redis</strong> for stateful session persistence and conversation context management, enabling robust multi-turn dialogues and dynamic objection handling.</li>
-          <li>Engineered automated lead-routing logic to trigger real-time human handoffs when high-intent customer responses are detected.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">Automated Lead Qualification & Campaign Orchestration API</span>
-          <span class="entry-tech">Python, Django REST Framework, PostgreSQL, Celery, Redis, Docker</span>
-        </div>
-        <ul>
-          <li>Engineered a scalable backend microservice managing outbound customer contact campaigns, contact lists, and automated call dispatching.</li>
-          <li>Utilized <strong>Celery & Redis</strong> for distributed asynchronous task execution, handling 10,000+ daily campaign records and telemetry updates without system bottlenecks.</li>
-          <li>Developed robust webhook endpoints to consume telephony call event logs, track call outcomes, and generate structured client analytics reports.</li>
-          <li>Containerized services using <strong>Docker</strong> to ensure 100% environment parity across staging and production deployments.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span class="entry-title">High-Performance Telephony & Event Observability Service</span>
-          <span class="entry-tech">FastAPI, PostgreSQL, WebSockets, Docker, Prometheus / Logging</span>
-        </div>
-        <ul>
-          <li>Developed backend middleware to capture live call telemetry, SIP/call status events, and latency metrics across communication pipelines.</li>
-          <li>Implemented structured logging, error alerting, and health check monitoring to diagnose and resolve production exceptions rapidly.</li>
-          <li>Optimized database queries and PostgreSQL index strategies, reducing API endpoint response times by 35%.</li>
-        </ul>
+        <div class="skill-item"><span class="skill-category">Programming & Automation:</span> Python (Core Python, OOP, Scripts, Task Automation, File Handling, Web Scraping)</div>
+        <div class="skill-item"><span class="skill-category">Generative AI & Smart Tools:</span> AI Document Search (RAG), FAISS, Sentence-Transformers, Llama 3 / Ollama, OpenAI API, Gemini API, Prompt Engineering</div>
+        <div class="skill-item"><span class="skill-category">Web Development & APIs:</span> REST APIs, JSON Handling, HTML5, Tailwind CSS, JavaScript (Basics), WhatsApp Business Link API Integration</div>
+        <div class="skill-item"><span class="skill-category">Cloud, DevOps & Tools:</span> Git, GitHub, AWS EC2 (Basic Linux Deployment), Google Colab, VS Code</div>
+        <div class="skill-item"><span class="skill-category">Database Fundamentals:</span> SQL Basics, MySQL (XAMPP environment)</div>
       </div>
     </section>
 
@@ -318,15 +263,60 @@
       <h2>Professional Experience</h2>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">Backend Developer / Freelance Software Engineer</span>
-          <span class="entry-date">2023 – Present</span>
+          <span class="entry-title">Freelance Python & Web Developer</span>
+          <span class="entry-date">May 2024 – Present</span>
         </div>
-        <div class="entry-tech" style="margin-bottom: 3px;">Remote • Client Solutions & Backend Architecture</div>
+        <div class="entry-tech" style="margin-bottom: 2px;">Self-Employed · Remote (Chennai, India)</div>
         <ul>
-          <li>Architected and delivered custom backend services, RESTful APIs, and full-stack web applications for commercial clients.</li>
-          <li>Implemented secure token-based authentication (JWT, OAuth2) and role-based access control (RBAC) ensuring strict client data isolation.</li>
-          <li>Resolved production exceptions, diagnosed concurrency bottlenecks, and optimized server configurations for high throughput.</li>
-          <li>Maintained an execution mindset by translating business requirements into clean, testable, and maintainable Python code.</li>
+          <li>Developed custom Python automation scripts and responsive business websites for small business clients.</li>
+          <li>Implemented 1-click WhatsApp enquiry systems, enabling local retailers to showcase collections and receive customer orders directly.</li>
+          <li>Maintained code repositories using Git & GitHub, and deployed cloud web applications on AWS EC2 and static hosting platforms.</li>
+          <li>Communicated directly with business owners to understand needs and deliver simple, effective software solutions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Featured Technical Projects</h2>
+
+      <!-- Project 1: RAG Document Assistant -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">AI Document Search & Assistant (RAG System)</span>
+          <span class="entry-date">Independent Project</span>
+        </div>
+        <div class="entry-tech" style="margin-bottom: 1px;">Python, Llama 3, Ollama, FAISS, Sentence-Transformers, Google Colab</div>
+        <ul>
+          <li>Built an intelligent search assistant that reads text documents and answers questions based on document content.</li>
+          <li>Implemented document chunking and vector search using <strong>FAISS</strong> to quickly retrieve matching sections for user queries.</li>
+          <li>Connected local <strong>Llama 3</strong> inference via <strong>Ollama</strong> on Google Colab GPU to produce accurate, context-aware answers.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2: AI Automation Script -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">AI-Powered Data Automation & Reporting Tools</span>
+          <span class="entry-date">Independent Project</span>
+        </div>
+        <div class="entry-tech" style="margin-bottom: 1px;">Python, Google Gemini API, OpenAI API, REST APIs, JSON</div>
+        <ul>
+          <li>Created automated Python scripts using modern LLM APIs (Gemini & OpenAI) to extract, summarize, and organize text data.</li>
+          <li>Built clean API request handlers with error catching, rate-limit management, and structured JSON output export.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3: Boutique Catalogue Web App -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Retail Boutique Website & WhatsApp Lead System</span>
+          <span class="entry-date">Client Project · Live</span>
+        </div>
+        <div class="entry-tech" style="margin-bottom: 1px;">HTML5, Tailwind CSS, JavaScript, WhatsApp API, Netlify (demo-project614713.netlify.app)</div>
+        <ul>
+          <li>Designed and launched a mobile-optimized product showcase website for local textile & boutique businesses.</li>
+          <li>Integrated 1-click WhatsApp enquiry buttons with automated product codes, allowing customers to easily enquire and buy.</li>
         </ul>
       </div>
     </section>
@@ -336,20 +326,25 @@
       <h2>Education</h2>
       <div class="entry">
         <div class="entry-header">
-          <span class="entry-title">Diploma in Computer Science</span>
+          <span class="entry-title">Diploma in Computer Science and Engineering</span>
           <span class="entry-date">2022 – 2024</span>
         </div>
-        <div style="font-size: 12.5px; color: #64748b;">Anna University / Affiliated College, Tamil Nadu, India</div>
+        <div style="font-size: 11px; color: #475569; font-weight: 500;">
+          Sembodai Rukmani Varatharajan Polytechnic College, Tamil Nadu
+        </div>
+        <div style="font-size: 10.5px; color: #64748b;">
+          Grade: First Class | Coursework: Python, Data Structures & Algorithms, OOPs, Computer Networks, Operating Systems
+        </div>
       </div>
     </section>
 
     <!-- Key Strengths -->
-    <section>
+    <section style="margin-bottom: 0;">
       <h2>Key Strengths</h2>
       <ul>
-        <li><strong>High Ownership:</strong> Self-driven engineer who takes complete accountability for feature reliability from development to production monitoring.</li>
-        <li><strong>Fast Learner:</strong> Proven ability to quickly master new cloud stacks, real-time protocols (WebSockets/WebRTC), and AI voice frameworks.</li>
-        <li><strong>Clear Communicator:</strong> Seamlessly collaborates with product, operations, and technical teams to deliver practical customer solutions.</li>
+        <li><strong>Independent Problem Solving:</strong> Strong debugging ability to diagnose errors, review documentation, and write clean Python code.</li>
+        <li><strong>Quick Learner:</strong> Able to rapidly pick up new APIs, tools, and cloud services through practical hands-on application.</li>
+        <li><strong>Practical Execution:</strong> Focused on delivering clean, usable solutions that solve actual business requirements.</li>
       </ul>
     </section>
   </div>
