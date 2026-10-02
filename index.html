@@ -3,294 +3,1011 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vegupathirajan Gothandaraman | Python Developer & AI Integrations</title>
-  <meta name="description" content="Portfolio of Vegupathirajan Gothandaraman - Junior Python Developer specializing in Python Scripting, AI API Integrations, Automation, and Web Development.">
-  <link rel="stylesheet" href="style.css">
+  <title>Vegupathirajan Gothandaraman | Cinematic 3D Portfolio</title>
+  <meta name="description" content="Cinematic 3D Developer Portfolio of Vegupathirajan Gothandaraman - Junior Python Developer, Generative AI Integrations, RAG Systems & Business Automations.">
+  <meta name="author" content="Vegupathirajan Gothandaraman">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Space Grotesk, Orbitron & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-accent">&lt;</span>Vegudev<span class="logo-accent">/&gt;</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Freelance Services</a></li>
-        <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
-      </ul>
-      <div class="mobile-toggle" id="mobileToggle">
-        <span></span><span></span><span></span>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyber-theme">
+
+  <!-- Custom Cyber Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Ambient CRT Scanline Overlay -->
+  <div class="crt-overlay"></div>
+
+  <!-- 3D Three.js Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- High-Tech Preloader Sequence -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="cyber-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-core">⚡</div>
+      </div>
+      <div class="preloader-title">VEGUPATHI // NEURAL MATRIX</div>
+      <div class="preloader-log" id="preloaderLog">INITIALIZING SYSTEM TELEMETRY...</div>
+      <div class="preloader-bar-bg">
+        <div class="preloader-bar-fill" id="preloaderFill"></div>
+      </div>
+      <div class="preloader-stats">
+        <span id="preloaderPercent">0%</span>
+        <span>SYS: 60 FPS • 3D SPATIAL ENGINE</span>
+      </div>
+      <button class="btn-cyber-enter" id="btnEnter" style="display:none;">
+        <span>ENTER MATRIX</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Top Cyber Navigation Bar -->
+  <header class="cyber-header" id="navbar">
+    <div class="telemetry-ticker">
+      <div class="ticker-track">
+        <span>● SYSTEM: ONLINE</span>
+        <span class="ticker-sep">|</span>
+        <span>LATENCY: 14ms</span>
+        <span class="ticker-sep">|</span>
+        <span>OPERATING LOCATION: CHENNAI, INDIA [IST]</span>
+        <span class="ticker-sep">|</span>
+        <span>PRIMARY DIRECTIVE: PYTHON AUTOMATION &amp; RAG AI SYSTEMS</span>
+        <span class="ticker-sep">|</span>
+        <span>STATUS: OPEN TO FULL-TIME &amp; FREELANCE MISSIONS</span>
       </div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="hero" id="hero">
-    <div class="container hero-content">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span> Available for Python & Web Freelance Projects
-      </div>
-      <h1 class="hero-title">
-        Building Practical <span class="gradient-text">Python Automations</span>, <span class="gradient-text">AI Integrations</span> & Web Solutions
-      </h1>
-      <p class="hero-subtitle">
-        Hi, I'm <strong>Vegupathirajan Gothandaraman</strong>. A passionate Junior Python Developer building custom task automations, modern AI API integrations (Google Gemini & OpenAI), document search tools (RAG), and responsive websites for small businesses.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Featured Projects</a>
-        <a href="resume.html" target="_blank" class="btn btn-secondary">View Live Resume</a>
-        <a href="https://github.com/vegudev" target="_blank" class="btn btn-outline">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          GitHub Profile
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" data-hover-sound>
+        <span class="brand-glyph">&lt;</span>
+        <span class="brand-text">VEGU<span class="neon-cyan">DEV</span></span>
+        <span class="brand-glyph">/&gt;</span>
+        <span class="brand-status-dot"></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu">
+        <a href="#about" class="nav-item" data-hover-sound><span class="nav-num">01.</span>DOSSIER</a>
+        <a href="#skills" class="nav-item" data-hover-sound><span class="nav-num">02.</span>NEURAL SKILLS</a>
+        <a href="#projects" class="nav-item" data-hover-sound><span class="nav-num">03.</span>3D HOLO-DECK</a>
+        <a href="#terminal" class="nav-item" data-hover-sound><span class="nav-num">04.</span>CONSOLE</a>
+        <a href="#services" class="nav-item" data-hover-sound><span class="nav-num">05.</span>SERVICES</a>
+        <a href="#contact" class="nav-item" data-hover-sound><span class="nav-num">06.</span>TRANSMISSION</a>
+      </nav>
+
+      <!-- Action HUD Controls -->
+      <div class="nav-actions">
+        <!-- Sound Synthesizer Controller -->
+        <button class="hud-audio-btn" id="audioToggle" title="Toggle Futuristic Audio Effects" data-hover-sound>
+          <div class="equalizer-bars" id="eqBars">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+          <span class="audio-label" id="audioLabel">AUDIO: OFF</span>
+        </button>
+
+        <!-- Live Resume Link -->
+        <a href="resume.html" target="_blank" class="btn-hud-resume" data-hover-sound>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>RESUME</span>
         </a>
-      </div>
 
-      <!-- Quick Metrics Strip -->
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <span class="metric-num">Python</span>
-          <span class="metric-label">Core & Automation</span>
-        </div>
-        <div class="metric-card">
-          <span class="metric-num">GenAI</span>
-          <span class="metric-label">Gemini & OpenAI APIs</span>
-        </div>
-        <div class="metric-card">
-          <span class="metric-num">WhatsApp</span>
-          <span class="metric-label">Direct Lead Workflows</span>
-        </div>
-        <div class="metric-card">
-          <span class="metric-num">AWS EC2</span>
-          <span class="metric-label">Linux Cloud Deployment</span>
-        </div>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu" data-hover-sound>
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Technical Skills Section -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Core Skills</span>
-        <h2 class="section-title">Technical Skills & Tooling</h2>
-        <p class="section-desc">Focused on practical programming, modern AI integration, and responsive web tools.</p>
-      </div>
-
-      <div class="skills-wrapper">
-        <div class="skill-category-card">
-          <div class="cat-header">
-            <span class="cat-icon">🐍</span>
-            <h3>Python & Automation</h3>
-          </div>
-          <div class="tags">
-            <span>Python 3</span>
-            <span>OOP</span>
-            <span>Task Automation</span>
-            <span>File I/O</span>
-            <span>Web Scraping</span>
-            <span>JSON Handling</span>
-          </div>
-        </div>
-
-        <div class="skill-category-card">
-          <div class="cat-header">
-            <span class="cat-icon">🤖</span>
-            <h3>AI & LLM Integration</h3>
-          </div>
-          <div class="tags">
-            <span>Google Gemini API</span>
-            <span>OpenAI API</span>
-            <span>RAG Workflows</span>
-            <span>FAISS Vector Search</span>
-            <span>Llama 3 / Ollama</span>
-            <span>Prompt Engineering</span>
-          </div>
-        </div>
-
-        <div class="skill-category-card">
-          <div class="cat-header">
-            <span class="cat-icon">🌐</span>
-            <h3>Web & Client Tools</h3>
-          </div>
-          <div class="tags">
-            <span>HTML5</span>
-            <span>Tailwind CSS</span>
-            <span>JavaScript Basics</span>
-            <span>REST APIs</span>
-            <span>WhatsApp API Links</span>
-            <span>Mobile-First UI</span>
-          </div>
-        </div>
-
-        <div class="skill-category-card">
-          <div class="cat-header">
-            <span class="cat-icon">☁️</span>
-            <h3>Cloud, DevOps & Database</h3>
-          </div>
-          <div class="tags">
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>AWS EC2</span>
-            <span>Google Colab</span>
-            <span>SQL Basics</span>
-            <span>MySQL (XAMPP)</span>
-          </div>
-        </div>
-      </div>
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-nav-panel" id="mobilePanel">
+    <div class="mobile-nav-header">
+      <span class="cyber-tag">SYSTEM NAVIGATION</span>
+      <button class="mobile-close" id="mobileClose">&times;</button>
     </div>
-  </section>
+    <ul class="mobile-links">
+      <li><a href="#about" class="mob-link"><span class="neon-cyan">01</span> // AGENT DOSSIER</a></li>
+      <li><a href="#skills" class="mob-link"><span class="neon-cyan">02</span> // NEURAL SKILLS</a></li>
+      <li><a href="#projects" class="mob-link"><span class="neon-cyan">03</span> // 3D HOLO PROJECTS</a></li>
+      <li><a href="#terminal" class="mob-link"><span class="neon-cyan">04</span> // CYBER TERMINAL</a></li>
+      <li><a href="#services" class="mob-link"><span class="neon-cyan">05</span> // SERVICES</a></li>
+      <li><a href="#contact" class="mob-link"><span class="neon-cyan">06</span> // TRANSMISSION</a></li>
+      <li><a href="resume.html" target="_blank" class="mob-link highlight-link">📄 VIEW LIVE RESUME</a></li>
+      <li><a href="resume.pdf" download class="mob-link">📥 DOWNLOAD PDF RESUME</a></li>
+    </ul>
+  </div>
 
-  <!-- Featured Projects Section -->
-  <section class="section section-dark" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Work Showcase</span>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-desc">Practical projects built to solve real-world problems and explore modern AI tools.</p>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <article class="project-card">
-          <div class="project-badge">Generative AI & Search</div>
-          <h3 class="project-title">AI Document Search & Assistant (RAG System)</h3>
-          <p class="project-summary">
-            An intelligent question-answering assistant that indexes local reference text using FAISS vector search and queries local Llama 3 models via Ollama to generate context-grounded, accurate answers.
-          </p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>FAISS</span>
-            <span>Llama 3</span>
-            <span>Ollama</span>
-            <span>Sentence-Transformers</span>
-            <span>Google Colab</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/vegudev" target="_blank" class="proj-link">GitHub Profile &rarr;</a>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card">
-          <div class="project-badge">Automation & LLM APIs</div>
-          <h3 class="project-title">AI-Powered Data Automation & Reporting Tools</h3>
-          <p class="project-summary">
-            Automated Python utilities that connect to Google Gemini and OpenAI APIs to extract, summarize, and restructure text data, with robust API error handling and structured JSON output export.
-          </p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>Gemini API</span>
-            <span>OpenAI API</span>
-            <span>REST APIs</span>
-            <span>JSON</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/vegudev" target="_blank" class="proj-link">GitHub Profile &rarr;</a>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card">
-          <div class="project-badge">Web & Client Leads</div>
-          <h3 class="project-title">Retail Boutique Showcase & WhatsApp Lead System</h3>
-          <p class="project-summary">
-            A responsive, mobile-first digital catalogue website built for local boutique and textile stores. Features bilingual Tamil/English support and 1-click WhatsApp enquiry buttons with dynamic product codes.
-          </p>
-          <div class="project-tags">
-            <span>HTML5</span>
-            <span>Tailwind CSS</span>
-            <span>JavaScript</span>
-            <span>WhatsApp API</span>
-            <span>Netlify</span>
-          </div>
-          <div class="project-links">
-            <a href="https://demo-project614713.netlify.app/" target="_blank" class="proj-link">Live Demo &rarr;</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Freelance Services Section -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Freelance Services</span>
-        <h2 class="section-title">How I Can Help Your Business</h2>
-        <p class="section-desc">Practical, cost-effective digital solutions for small businesses and founders.</p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🐍</div>
-          <h3>Python Automation Scripts</h3>
-          <p>Automate repetitive manual tasks, web data collection, file conversions, and report generation using clean Python scripts.</p>
+  <main>
+    <!-- HERO SECTION (Cinematic 3D Interactive Center) -->
+    <section class="section-hero" id="hero">
+      <div class="hero-container">
+        
+        <!-- Cyber Status Indicator -->
+        <div class="hero-status-pill animate-fade-in">
+          <span class="status-pulse-core"></span>
+          <span class="status-code">ID: VEGU-DEV-2026</span>
+          <span class="pill-divider">•</span>
+          <span class="status-msg">JUNIOR PYTHON DEVELOPER &amp; AI INTEGRATIONS</span>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">🤖</div>
-          <h3>AI API Integrations</h3>
-          <p>Integrate Google Gemini or OpenAI LLM APIs into your workflows for automated customer replies, content generation, and smart data summaries.</p>
+        <!-- Main Cinematic Headline -->
+        <h1 class="hero-title animate-title">
+          <span class="glitch-word" data-text="VEGUPATHIRAJAN">VEGUPATHIRAJAN</span><br>
+          <span class="gradient-cinematic">GOTHANDARAMAN</span>
+        </h1>
+
+        <!-- Typewriter Scramble Subtitle -->
+        <div class="hero-subtitle-box">
+          <span class="prompt-symbol">&gt;</span>
+          <span class="typewriter-text" id="heroTypewriter"></span>
+          <span class="blinking-cursor">_</span>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">🛍️</div>
-          <h3>Boutique & Retail Catalogue Sites</h3>
-          <p>Mobile-friendly product showcase sites with 1-click WhatsApp enquiry buttons designed to convert online visitors into direct paying customers.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">☁️</div>
-          <h3>Cloud Deployment (AWS EC2)</h3>
-          <p>Setup, configure, and deploy your web scripts and static landing pages on AWS EC2 Linux instances and cloud hosting platforms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Hire Me Section -->
-  <section class="section section-dark" id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <span class="section-tag">Let's Connect</span>
-        <h2 class="section-title">Have a Project or Looking to Hire?</h2>
-        <p class="contact-desc">
-          Whether you need a custom automation script, a WhatsApp catalogue site for your store, or are looking to hire a dedicated Junior Python Developer, feel free to reach out!
-        </p>
-
-        <div class="contact-buttons">
-          <a href="mailto:vegupathi666@gmail.com" class="btn btn-primary">
-            📧 Email: vegupathi666@gmail.com
+        <!-- Hero Actions -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn-cyber-primary" data-hover-sound data-click-sound>
+            <span class="btn-glare"></span>
+            <span class="btn-text">EXPLORE 3D PROJECTS</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="https://wa.me/919360206902" target="_blank" class="btn btn-whatsapp">
-            💬 WhatsApp: +91 93602 06902
+
+          <a href="#terminal" class="btn-cyber-secondary" data-hover-sound data-click-sound>
+            <span class="terminal-dot"></span>
+            <span class="btn-text">LAUNCH TERMINAL</span>
+            <span class="key-hint">_</span>
           </a>
-          <a href="https://www.linkedin.com/in/vegupathi-g/" target="_blank" class="btn btn-secondary">
-            🔗 Connect on LinkedIn
+
+          <a href="https://wa.me/919360206902?text=Hi%20Vegupathirajan,%20I%20saw%20your%20cinematic%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" class="btn-cyber-whatsapp" data-hover-sound data-click-sound>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WHATSAPP CHAT</span>
           </a>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-content">
-      <p>&copy; 2026 Vegupathirajan Gothandaraman. All rights reserved.</p>
+        <!-- 3D Interactive Telemetry Strip -->
+        <div class="hero-telemetry-grid">
+          <div class="telemetry-card" data-tilt>
+            <div class="telemetry-corner tl"></div>
+            <div class="telemetry-corner br"></div>
+            <div class="telemetry-icon">🐍</div>
+            <div class="telemetry-info">
+              <span class="telemetry-label">CORE ARCHITECTURE</span>
+              <h3 class="telemetry-title">Python Automation</h3>
+              <p class="telemetry-desc">OOP, Custom ETL, Web Scraping, Task Automation</p>
+            </div>
+            <div class="telemetry-meter"><span style="width: 90%;"></span></div>
+          </div>
+
+          <div class="telemetry-card" data-tilt>
+            <div class="telemetry-corner tl"></div>
+            <div class="telemetry-corner br"></div>
+            <div class="telemetry-icon">🧠</div>
+            <div class="telemetry-info">
+              <span class="telemetry-label">AI &amp; EMBEDDINGS</span>
+              <h3 class="telemetry-title">RAG &amp; LLM Systems</h3>
+              <p class="telemetry-desc">FAISS, Llama 3 / Ollama, Gemini API, OpenAI</p>
+            </div>
+            <div class="telemetry-meter"><span style="width: 85%;"></span></div>
+          </div>
+
+          <div class="telemetry-card" data-tilt>
+            <div class="telemetry-corner tl"></div>
+            <div class="telemetry-corner br"></div>
+            <div class="telemetry-icon">⚡</div>
+            <div class="telemetry-info">
+              <span class="telemetry-label">CONVERSION ENGINES</span>
+              <h3 class="telemetry-title">WhatsApp Lead Workflows</h3>
+              <p class="telemetry-desc">Mobile-first catalogue apps, direct retail orders</p>
+            </div>
+            <div class="telemetry-meter"><span style="width: 92%;"></span></div>
+          </div>
+
+          <div class="telemetry-card" data-tilt>
+            <div class="telemetry-corner tl"></div>
+            <div class="telemetry-corner br"></div>
+            <div class="telemetry-icon">☁️</div>
+            <div class="telemetry-info">
+              <span class="telemetry-label">INFRASTRUCTURE</span>
+              <h3 class="telemetry-title">Cloud Deployment</h3>
+              <p class="telemetry-desc">AWS EC2 Linux, Git/GitHub, Colab GPUs</p>
+            </div>
+            <div class="telemetry-meter"><span style="width: 80%;"></span></div>
+          </div>
+        </div>
+
+        <!-- 3D Hint -->
+        <div class="scene-hint">
+          <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+          </span>
+          <span>MOVE CURSOR TO ROTATE 3D NEURAL CORE • SCROLL TO TRAVEL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 01: AGENT DOSSIER (About Me) -->
+    <section class="cyber-section" id="about">
+      <div class="cyber-container">
+        <div class="section-tag-box">
+          <span class="tag-hash">#01</span>
+          <span class="tag-title">PROFILE SPECIFICATION</span>
+          <span class="tag-line"></span>
+        </div>
+        <h2 class="section-main-heading">ENGINEERING <span class="neon-cyan">DOSSIER</span></h2>
+
+        <div class="dossier-grid">
+          <!-- Cyber Identity Badge -->
+          <div class="dossier-card identity-card" data-tilt>
+            <div class="card-glow-mesh"></div>
+            <div class="dossier-header">
+              <div class="avatar-holo-frame">
+                <div class="avatar-holo-inner">
+                  <div class="avatar-code">VG</div>
+                </div>
+                <div class="radar-scan"></div>
+              </div>
+              <div class="dossier-titles">
+                <span class="clearance-tag">CLEARED // LEVEL 01 DEVELOPER</span>
+                <h3 class="dossier-name">Vegupathirajan G.</h3>
+                <p class="dossier-role">Junior Python Developer &amp; AI Integrations</p>
+              </div>
+            </div>
+
+            <div class="dossier-specs-list">
+              <div class="spec-row">
+                <span class="spec-key">LOCATION</span>
+                <span class="spec-val">Chennai, Tamil Nadu, India</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">DEGREE</span>
+                <span class="spec-val">Diploma in Computer Science &amp; Engg.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">INSTITUTION</span>
+                <span class="spec-val">SRV Polytechnic College (First Class)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">PRIMARY FOCUS</span>
+                <span class="spec-val neon-cyan">Python Scripts • GenAI APIs • RAG • Web</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">GITHUB REPO</span>
+                <a href="https://github.com/vegudev" target="_blank" class="spec-link">github.com/vegudev &rarr;</a>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">LINKEDIN</span>
+                <a href="https://www.linkedin.com/in/vegupathi-g/" target="_blank" class="spec-link">linkedin.com/in/vegupathi-g &rarr;</a>
+              </div>
+            </div>
+
+            <div class="dossier-foot-quote">
+              "Building pragmatic, robust Python and AI systems that solve genuine operational challenges for businesses."
+            </div>
+          </div>
+
+          <!-- Mission Objectives & Narrative -->
+          <div class="dossier-card story-card" data-tilt>
+            <div class="terminal-titlebar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="bar-title">MISSION_BRIEFING.LOG</span>
+            </div>
+            <div class="story-content">
+              <p class="story-para">
+                I am a focused, result-driven <strong>Junior Python Developer</strong> with an insatiable curiosity for autonomous automation and Generative AI systems. My technical journey is anchored in writing production-ready scripts, automating complex manual data routines, and architecting intelligent semantic search applications (RAG) using FAISS and local LLM runtimes like Llama 3.
+              </p>
+              <p class="story-para">
+                In my freelance engagements, I collaborate directly with small businesses and retailers to deploy friction-free solutions: from high-converting mobile catalogue web platforms equipped with <strong>1-click WhatsApp order processing</strong>, to headless Python web scrapers and AI-powered text summary pipelines using <strong>Google Gemini</strong> and <strong>OpenAI APIs</strong>.
+              </p>
+
+              <div class="stat-counter-grid">
+                <div class="stat-box">
+                  <div class="stat-number" data-count="100">0</div>
+                  <div class="stat-label">% First Class Graduate</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number" data-count="3">0</div>
+                  <div class="stat-label">Production AI &amp; Web Apps</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number" data-count="100">0</div>
+                  <div class="stat-label">% Commitment to Code Quality</div>
+                </div>
+              </div>
+
+              <div class="story-actions">
+                <a href="resume.html" target="_blank" class="btn-cyber-primary" data-hover-sound>
+                  <span>INSPECT FULL RESUME</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#contact" class="btn-cyber-secondary" data-hover-sound>
+                  <span>INITIATE TRANSMISSION</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: NEURAL SKILLS MATRIX -->
+    <section class="cyber-section" id="skills">
+      <div class="cyber-container">
+        <div class="section-tag-box">
+          <span class="tag-hash">#02</span>
+          <span class="tag-title">TECHNICAL CAPABILITIES</span>
+          <span class="tag-line"></span>
+        </div>
+        <h2 class="section-main-heading">NEURAL <span class="neon-purple">SKILLS MATRIX</span></h2>
+        <p class="section-sub-desc">Engineered for clean code, reliable APIs, modern AI tooling, and resilient workflows.</p>
+
+        <!-- Skill Filters -->
+        <div class="skills-filter-tabs">
+          <button class="filter-tab active" data-filter="all" data-hover-sound>ALL SYSTEMS</button>
+          <button class="filter-tab" data-filter="python" data-hover-sound>PYTHON &amp; AUTOMATION</button>
+          <button class="filter-tab" data-filter="genai" data-hover-sound>GENAI &amp; RAG</button>
+          <button class="filter-tab" data-filter="web" data-hover-sound>WEB &amp; CLIENT APIS</button>
+          <button class="filter-tab" data-filter="cloud" data-hover-sound>CLOUD &amp; DEVOPS</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-holo-grid">
+          <!-- Skill 1 -->
+          <div class="skill-card" data-cat="python" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">🐍</span>
+              <span class="skill-level-badge">CORE STRENGTH</span>
+            </div>
+            <h3 class="skill-title">Core Python 3 &amp; OOP</h3>
+            <p class="skill-desc">Object-oriented architecture, modular scripting, clean algorithmic logic, file I/O operations, error catching, and custom utilities.</p>
+            <div class="skill-tags">
+              <span>OOP</span><span>Data Structures</span><span>Exception Handling</span><span>Pip / Venv</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 90%;"></span></div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill-card" data-cat="python" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">⚙️</span>
+              <span class="skill-level-badge">AUTOMATION</span>
+            </div>
+            <h3 class="skill-title">Task Automation &amp; Web Scraping</h3>
+            <p class="skill-desc">Headless automated extraction, BeautifulSoup, requests, JSON handling, CSV/Excel transformations, and scheduled routines.</p>
+            <div class="skill-tags">
+              <span>Web Scraping</span><span>Requests</span><span>BeautifulSoup</span><span>ETL Pipelines</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 88%;"></span></div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill-card" data-cat="genai" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">🧠</span>
+              <span class="skill-level-badge">AI ARCHITECTURE</span>
+            </div>
+            <h3 class="skill-title">RAG &amp; Vector Embeddings</h3>
+            <p class="skill-desc">FAISS vector database indexing, Sentence-Transformers embeddings, context chunking, similarity ranking, and grounded document retrieval.</p>
+            <div class="skill-tags">
+              <span>FAISS</span><span>Sentence-Transformers</span><span>RAG</span><span>Semantic Search</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 86%;"></span></div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="skill-card" data-cat="genai" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">🤖</span>
+              <span class="skill-level-badge">LLM INTEGRATIONS</span>
+            </div>
+            <h3 class="skill-title">Gemini, OpenAI &amp; Ollama (Llama 3)</h3>
+            <p class="skill-desc">Integrating modern Generative AI endpoints, local LLM execution via Ollama GPU environments, prompt engineering, structured JSON responses.</p>
+            <div class="skill-tags">
+              <span>Google Gemini</span><span>OpenAI API</span><span>Ollama</span><span>Llama 3</span><span>JSON Output</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 85%;"></span></div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div class="skill-card" data-cat="web" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">📱</span>
+              <span class="skill-level-badge">COMMERCE LEADS</span>
+            </div>
+            <h3 class="skill-title">WhatsApp Business Link API</h3>
+            <p class="skill-desc">1-click direct conversational sales funnels, dynamic product code URL injection, pre-filled order payloads for retail catalogues.</p>
+            <div class="skill-tags">
+              <span>WhatsApp API</span><span>Click-to-Chat</span><span>Lead Funnels</span><span>Retail Tech</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 95%;"></span></div>
+          </div>
+
+          <!-- Skill 6 -->
+          <div class="skill-card" data-cat="web" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">🌐</span>
+              <span class="skill-level-badge">FRONTEND ENGINE</span>
+            </div>
+            <h3 class="skill-title">Responsive Web &amp; Tailwind CSS</h3>
+            <p class="skill-desc">Mobile-first user interfaces, semantic HTML5, modern CSS3 animations, glassmorphism, DOM manipulation with JavaScript.</p>
+            <div class="skill-tags">
+              <span>HTML5</span><span>Tailwind CSS</span><span>JavaScript (ES6)</span><span>Mobile-First UI</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 85%;"></span></div>
+          </div>
+
+          <!-- Skill 7 -->
+          <div class="skill-card" data-cat="cloud" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">☁️</span>
+              <span class="skill-level-badge">CLOUD &amp; LINUX</span>
+            </div>
+            <h3 class="skill-title">AWS EC2 &amp; Linux Environments</h3>
+            <p class="skill-desc">Launching and provisioning EC2 Ubuntu/Linux servers, SSH key management, daemon execution, static cloud deployments (Netlify/Vercel).</p>
+            <div class="skill-tags">
+              <span>AWS EC2</span><span>Linux Shell</span><span>SSH</span><span>Netlify</span><span>Colab GPU</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 78%;"></span></div>
+          </div>
+
+          <!-- Skill 8 -->
+          <div class="skill-card" data-cat="cloud" data-tilt>
+            <div class="skill-icon-header">
+              <span class="skill-svg">🗄️</span>
+              <span class="skill-level-badge">VERSION &amp; DATA</span>
+            </div>
+            <h3 class="skill-title">Git, GitHub &amp; SQL Basics</h3>
+            <p class="skill-desc">Branching, merge workflows, Git commits, repository synchronization, relational schema design, MySQL queries in XAMPP.</p>
+            <div class="skill-tags">
+              <span>Git</span><span>GitHub</span><span>SQL</span><span>MySQL</span><span>XAMPP</span>
+            </div>
+            <div class="skill-power-bar"><span style="width: 84%;"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: 3D PROJECT HOLO-DECK -->
+    <section class="cyber-section" id="projects">
+      <div class="cyber-container">
+        <div class="section-tag-box">
+          <span class="tag-hash">#03</span>
+          <span class="tag-title">PRODUCTION DEPLOYMENTS</span>
+          <span class="tag-line"></span>
+        </div>
+        <h2 class="section-main-heading">3D PROJECT <span class="neon-cyan">HOLO-DECK</span></h2>
+        <p class="section-sub-desc">Featured systems engineered for intelligence, automation efficiency, and direct business revenue.</p>
+
+        <div class="projects-holo-container">
+
+          <!-- PROJECT 01: RAG System -->
+          <article class="holo-project-card" data-tilt>
+            <div class="card-edge-glow"></div>
+            <div class="project-header-strip">
+              <span class="project-class-tag">MISSION // AI RESEARCH &amp; VECTOR SEARCH</span>
+              <span class="project-sys-id">PRJ-01 // RAG</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-badge-pill">
+                <span class="dot-cyan"></span>
+                <span>Generative AI • RAG System</span>
+              </div>
+              <h3 class="project-name">AI Document Search &amp; Assistant</h3>
+              <p class="project-summary">
+                An intelligent retrieval-augmented generation (RAG) assistant that ingests raw documents, converts text chunks into high-dimensional vector embeddings, and performs sub-second similarity matching using <strong>FAISS</strong>. Synthesizes factual, context-grounded responses using a locally executed <strong>Llama 3</strong> neural model via Ollama.
+              </p>
+
+              <div class="project-metrics-row">
+                <div class="p-metric">
+                  <span class="pm-val">FAISS</span>
+                  <span class="pm-lbl">Vector Index</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">Llama 3</span>
+                  <span class="pm-lbl">Local LLM</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">Colab GPU</span>
+                  <span class="pm-lbl">Inference</span>
+                </div>
+              </div>
+
+              <div class="project-tech-chips">
+                <span>Python</span>
+                <span>FAISS</span>
+                <span>Llama 3</span>
+                <span>Ollama</span>
+                <span>Sentence-Transformers</span>
+                <span>Google Colab</span>
+              </div>
+
+              <div class="project-action-strip">
+                <button class="btn-holo-blueprint" data-project="rag" data-hover-sound data-click-sound>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span>VIEW BLUEPRINT</span>
+                </button>
+                <a href="https://github.com/vegudev" target="_blank" class="btn-holo-code" data-hover-sound>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GITHUB PROFILE &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: AI Automation Scripts -->
+          <article class="holo-project-card" data-tilt>
+            <div class="card-edge-glow"></div>
+            <div class="project-header-strip">
+              <span class="project-class-tag">MISSION // AUTOMATION &amp; LLM APIS</span>
+              <span class="project-sys-id">PRJ-02 // AUTOMA</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-badge-pill">
+                <span class="dot-purple"></span>
+                <span>Python • Generative AI APIs</span>
+              </div>
+              <h3 class="project-name">AI-Powered Data Automation &amp; Reporting Engine</h3>
+              <p class="project-summary">
+                Autonomous Python pipelines that interact with <strong>Google Gemini API</strong> and <strong>OpenAI API</strong> to extract, clean, categorize, and synthesize unstructured text feeds. Built with resilient exponential backoff, rate-limit throttling, and structured JSON schema exports.
+              </p>
+
+              <div class="project-metrics-row">
+                <div class="p-metric">
+                  <span class="pm-val">Gemini 1.5</span>
+                  <span class="pm-lbl">API Pipeline</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">JSON</span>
+                  <span class="pm-lbl">Schema Export</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">100%</span>
+                  <span class="pm-lbl">Error Handling</span>
+                </div>
+              </div>
+
+              <div class="project-tech-chips">
+                <span>Python</span>
+                <span>Google Gemini API</span>
+                <span>OpenAI API</span>
+                <span>REST APIs</span>
+                <span>JSON</span>
+                <span>Task Automation</span>
+              </div>
+
+              <div class="project-action-strip">
+                <button class="btn-holo-blueprint" data-project="automation" data-hover-sound data-click-sound>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span>VIEW BLUEPRINT</span>
+                </button>
+                <a href="https://github.com/vegudev" target="_blank" class="btn-holo-code" data-hover-sound>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GITHUB PROFILE &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: Retail Boutique Website -->
+          <article class="holo-project-card" data-tilt>
+            <div class="card-edge-glow"></div>
+            <div class="project-header-strip">
+              <span class="project-class-tag">MISSION // CLIENT DEPLOYMENT • LIVE</span>
+              <span class="project-sys-id">PRJ-03 // RETAIL</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-badge-pill">
+                <span class="dot-green"></span>
+                <span>Production Web • WhatsApp API</span>
+              </div>
+              <h3 class="project-name">Retail Boutique Showcase &amp; WhatsApp Lead Engine</h3>
+              <p class="project-summary">
+                A high-conversion mobile-first catalogue web app built for local retail boutiques. Features bilingual Tamil/English navigation and <strong>1-click WhatsApp order buttons</strong> that automatically encode product SKUs and enquiry text, resulting in immediate order leads for the merchant.
+              </p>
+
+              <div class="project-metrics-row">
+                <div class="p-metric">
+                  <span class="pm-val">1-Click</span>
+                  <span class="pm-lbl">Order Funnel</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">Netlify</span>
+                  <span class="pm-lbl">Live Hosting</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">&lt; 1s</span>
+                  <span class="pm-lbl">Load Speed</span>
+                </div>
+              </div>
+
+              <div class="project-tech-chips">
+                <span>HTML5</span>
+                <span>Tailwind CSS</span>
+                <span>JavaScript</span>
+                <span>WhatsApp Link API</span>
+                <span>Netlify</span>
+                <span>Bilingual UI</span>
+              </div>
+
+              <div class="project-action-strip">
+                <a href="https://demo-project614713.netlify.app/" target="_blank" class="btn-holo-live" data-hover-sound>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                  <span>LAUNCH LIVE SITE &rarr;</span>
+                </a>
+                <button class="btn-holo-blueprint" data-project="retail" data-hover-sound data-click-sound>
+                  <span>VIEW BLUEPRINT</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: Python Automation & Scraping Suite -->
+          <article class="holo-project-card" data-tilt>
+            <div class="card-edge-glow"></div>
+            <div class="project-header-strip">
+              <span class="project-class-tag">MISSION // WORKFLOW OPTIMIZATION</span>
+              <span class="project-sys-id">PRJ-04 // PIPELINE</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-badge-pill">
+                <span class="dot-cyan"></span>
+                <span>Web Scraping • File Systems</span>
+              </div>
+              <h3 class="project-name">Python Web Scraper &amp; File Pipeline Suite</h3>
+              <p class="project-summary">
+                Robust collection of automation utilities built with Python, BeautifulSoup, and Requests. Automates recurring client data harvesting, parses deeply nested HTML documents, detects page variations, and transforms unstructured tables into clean Excel and CSV datasets.
+              </p>
+
+              <div class="project-metrics-row">
+                <div class="p-metric">
+                  <span class="pm-val">10x</span>
+                  <span class="pm-lbl">Time Saved</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">Clean</span>
+                  <span class="pm-lbl">ETL Logic</span>
+                </div>
+                <div class="p-metric">
+                  <span class="pm-val">Zero</span>
+                  <span class="pm-lbl">Manual Effort</span>
+                </div>
+              </div>
+
+              <div class="project-tech-chips">
+                <span>Python</span>
+                <span>BeautifulSoup</span>
+                <span>Requests</span>
+                <span>File Handling</span>
+                <span>CSV / Excel</span>
+                <span>Automation</span>
+              </div>
+
+              <div class="project-action-strip">
+                <button class="btn-holo-blueprint" data-project="scraper" data-hover-sound data-click-sound>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span>VIEW BLUEPRINT</span>
+                </button>
+                <a href="https://github.com/vegudev" target="_blank" class="btn-holo-code" data-hover-sound>
+                  <span>GITHUB PROFILE &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: INTERACTIVE CYBER TERMINAL -->
+    <section class="cyber-section" id="terminal">
+      <div class="cyber-container">
+        <div class="section-tag-box">
+          <span class="tag-hash">#04</span>
+          <span class="tag-title">SYSTEM SHELL INTERACTION</span>
+          <span class="tag-line"></span>
+        </div>
+        <h2 class="section-main-heading">NEURAL <span class="neon-green">CONSOLE</span></h2>
+        <p class="section-sub-desc">Direct command-line interface to interrogate developer capabilities, run queries, or execute commands.</p>
+
+        <div class="terminal-wrapper" data-tilt>
+          <div class="terminal-bar">
+            <div class="terminal-buttons">
+              <span class="t-btn red"></span>
+              <span class="t-btn yellow"></span>
+              <span class="t-btn green"></span>
+            </div>
+            <div class="terminal-title-text">
+              <span class="t-icon">⚡</span>
+              <span>vegudev@quantum-core:~ (zsh/python3)</span>
+            </div>
+            <div class="terminal-actions">
+              <span class="t-status">STATUS: CONNECTED</span>
+            </div>
+          </div>
+
+          <!-- Quick Command Chips -->
+          <div class="terminal-quick-chips">
+            <span class="chips-label">QUICK MACROS:</span>
+            <button class="t-chip" data-cmd="help" data-hover-sound>help</button>
+            <button class="t-chip" data-cmd="skills" data-hover-sound>skills</button>
+            <button class="t-chip" data-cmd="projects" data-hover-sound>projects</button>
+            <button class="t-cmd-chip" data-cmd="cat resume.txt" data-hover-sound>cat resume.txt</button>
+            <button class="t-chip" data-cmd="contact" data-hover-sound>contact</button>
+            <button class="t-chip" data-cmd="hire" data-hover-sound>hire</button>
+            <button class="t-chip" data-cmd="clear" data-hover-sound>clear</button>
+          </div>
+
+          <!-- Terminal Output Screen -->
+          <div class="terminal-screen" id="terminalScreen">
+            <div class="terminal-welcome-banner">
+  __      ________ _____ _    _ _____  ________      __
+  \ \    / /  ____/ ____| |  | |  __ \|  ____\ \    / /
+   \ \  / /| |__ | |  __| |  | | |  | | |__   \ \  / / 
+    \ \/ / |  __|| | |_ | |  | | |  | |  __|   \ \/ /  
+     \  /  | |___| |__| | |__| | |__| | |____   \  /   
+      \/   |______\_____|\____/|_____/|______|   \/    
+            </div>
+            <div class="term-line output-text">
+              Type <span class="t-highlight">'help'</span> to view available system commands or click any macro chip above.
+            </div>
+            <div class="term-line output-text">
+              System ready for queries. Initialized Vegupathi AI Kernel v4.2.
+            </div>
+            <div id="terminalHistory"></div>
+
+            <!-- Active Input Line -->
+            <div class="terminal-input-row">
+              <span class="term-prompt">vegudev@quantum:~$</span>
+              <input type="text" id="terminalInput" class="term-input" autocomplete="off" spellcheck="false" placeholder="type command (e.g. 'help', 'skills', 'hire')...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: FREELANCE & ENGINEERING SERVICES -->
+    <section class="cyber-section" id="services">
+      <div class="cyber-container">
+        <div class="section-tag-box">
+          <span class="tag-hash">#05</span>
+          <span class="tag-title">SOLUTIONS ARCHITECTURE</span>
+          <span class="tag-line"></span>
+        </div>
+        <h2 class="section-main-heading">FREELANCE &amp; <span class="neon-cyan">ENGINEERING MISSIONS</span></h2>
+        <p class="section-sub-desc">Delivering high-value automations and conversion web applications for founders and retail businesses.</p>
+
+        <div class="services-holo-grid">
+          <div class="service-holo-card" data-tilt>
+            <div class="service-holo-glow"></div>
+            <div class="service-holo-icon">🐍</div>
+            <h3 class="service-holo-title">Custom Python Automation</h3>
+            <p class="service-holo-desc">Eliminate tedious manual processes with custom Python scripts that automate data extraction, bulk file handling, report formatting, and scheduled tasks.</p>
+            <ul class="service-feature-list">
+              <li>✓ Web scrapers with robust error recovery</li>
+              <li>✓ Excel &amp; CSV data processing workflows</li>
+              <li>✓ Automated system alerts and scheduled routines</li>
+            </ul>
+          </div>
+
+          <div class="service-holo-card" data-tilt>
+            <div class="service-holo-glow"></div>
+            <div class="service-holo-icon">🤖</div>
+            <h3 class="service-holo-title">Generative AI API Integrations</h3>
+            <p class="service-holo-desc">Supercharge applications with modern AI capabilities. Implement Google Gemini and OpenAI endpoints for automated content summarization, smart data classification, and conversational bots.</p>
+            <ul class="service-feature-list">
+              <li>✓ Google Gemini &amp; OpenAI API connectors</li>
+              <li>✓ Vector retrieval (RAG) over private documents</li>
+              <li>✓ Structured JSON output pipelines</li>
+            </ul>
+          </div>
+
+          <div class="service-holo-card" data-tilt>
+            <div class="service-holo-glow"></div>
+            <div class="service-holo-icon">🛍️</div>
+            <h3 class="service-holo-title">Retail Catalogue &amp; WhatsApp Stores</h3>
+            <p class="service-holo-desc">Empower local stores to sell effortlessly. I build lightweight, lightning-fast digital catalogues with integrated 1-click WhatsApp order triggers that convert visitors into buyers.</p>
+            <ul class="service-feature-list">
+              <li>✓ Mobile-first catalog with image galleries</li>
+              <li>✓ 1-click WhatsApp enquiry with auto product codes</li>
+              <li>✓ Netlify / Vercel cloud deployment</li>
+            </ul>
+          </div>
+
+          <div class="service-holo-card" data-tilt>
+            <div class="service-holo-glow"></div>
+            <div class="service-holo-icon">☁️</div>
+            <h3 class="service-holo-title">Cloud Deployment (AWS EC2)</h3>
+            <p class="service-holo-desc">Set up and configure Linux cloud servers on AWS EC2. Deploy web apps, scripts, and static portfolio landing pages with continuous availability and domain wiring.</p>
+            <ul class="service-feature-list">
+              <li>✓ AWS EC2 Linux instance provisioning</li>
+              <li>✓ SSH security &amp; background service configuration</li>
+              <li>✓ Git workflow integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06: TRANSMISSION / CONTACT PORTAL -->
+    <section class="cyber-section" id="contact">
+      <div class="cyber-container">
+        <div class="section-tag-box">
+          <span class="tag-hash">#06</span>
+          <span class="tag-title">COMMUNICATIONS CHANNEL</span>
+          <span class="tag-line"></span>
+        </div>
+        <h2 class="section-main-heading">INITIATE <span class="neon-cyan">TRANSMISSION</span></h2>
+        <p class="section-sub-desc">Whether you have an upcoming project, need automation tooling, or are looking to hire a Junior Python Developer, reach out directly.</p>
+
+        <div class="transmission-layout">
+          <!-- Direct Quick Links -->
+          <div class="transmission-channels" data-tilt>
+            <div class="channel-card">
+              <div class="channel-icon wa-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">INSTANT MESSAGING (FASTEST)</span>
+                <h4 class="channel-name">WhatsApp Direct</h4>
+                <p class="channel-meta">+91 93602 06902</p>
+              </div>
+              <a href="https://wa.me/919360206902?text=Hello%20Vegupathirajan,%20I%20am%20interested%20in%20discussing%20a%20project/job%20opportunity." target="_blank" class="channel-link-btn" data-hover-sound>
+                <span>OPEN CHAT &rarr;</span>
+              </a>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon mail-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">DIRECT EMAIL</span>
+                <h4 class="channel-name">vegupathi666@gmail.com</h4>
+                <p class="channel-meta">Click to copy or send mail</p>
+              </div>
+              <button class="channel-link-btn" id="btnCopyEmail" data-email="vegupathi666@gmail.com" data-hover-sound>
+                <span id="copyEmailText">COPY EMAIL</span>
+              </button>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon phone-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">VOICE LINE</span>
+                <h4 class="channel-name">+91 93602 06902</h4>
+                <p class="channel-meta">Tamil Nadu, India</p>
+              </div>
+              <a href="tel:+919360206902" class="channel-link-btn" data-hover-sound>
+                <span>CALL NOW &rarr;</span>
+              </a>
+            </div>
+
+            <div class="social-bar">
+              <a href="https://github.com/vegudev" target="_blank" class="social-link-btn" data-hover-sound>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub Profile</span>
+              </a>
+              <a href="https://www.linkedin.com/in/vegupathi-g/" target="_blank" class="social-link-btn" data-hover-sound>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="resume.html" target="_blank" class="social-link-btn" data-hover-sound>
+                <span>Live Resume &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Interactive Transmission Dispatcher -->
+          <div class="transmission-form-card" data-tilt>
+            <div class="form-header-bar">
+              <span class="f-dot"></span>
+              <span class="f-title">TRANSMISSION COMPOSER</span>
+            </div>
+
+            <form id="transmissionForm" class="cyber-form">
+              <div class="form-group">
+                <label for="senderName" class="form-label">SENDER IDENTIFIER (YOUR NAME):</label>
+                <input type="text" id="senderName" class="form-input" placeholder="e.g. Anand Kumar / Tech Recruiter" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject" class="form-label">DIRECTIVE / SUBJECT:</label>
+                <input type="text" id="senderSubject" class="form-input" placeholder="e.g. Python Developer Role / Freelance Automation Project" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">TRANSMISSION PAYLOAD (MESSAGE):</label>
+                <textarea id="senderMessage" class="form-textarea" rows="4" placeholder="Describe project requirements, tech stack, or job details..." required></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="button" id="btnSendWhatsApp" class="btn-cyber-whatsapp w-100" data-hover-sound data-click-sound>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>DISPATCH VIA WHATSAPP</span>
+                </button>
+
+                <button type="button" id="btnSendEmail" class="btn-cyber-primary w-100" data-hover-sound data-click-sound>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>DISPATCH VIA EMAIL</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cyber Footer -->
+  <footer class="cyber-footer">
+    <div class="cyber-container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="brand-glyph">&lt;</span>VEGU<span class="neon-cyan">DEV</span><span class="brand-glyph">/&gt;</span>
+        </a>
+        <p class="footer-copy">&copy; 2026 Vegupathirajan Gothandaraman. All neural systems operational.</p>
+      </div>
+
+      <div class="footer-center">
+        <span class="footer-badge">RENDERED AT 60 FPS • THREE.JS SPATIAL ENGINE</span>
+      </div>
+
       <div class="footer-links">
-        <a href="https://github.com/vegudev" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/vegupathi-g/" target="_blank">LinkedIn</a>
-        <a href="resume.html" target="_blank">Resume</a>
+        <a href="https://github.com/vegudev" target="_blank" data-hover-sound>GitHub</a>
+        <a href="https://www.linkedin.com/in/vegupathi-g/" target="_blank" data-hover-sound>LinkedIn</a>
+        <a href="resume.html" target="_blank" data-hover-sound>Live Resume</a>
+        <a href="resume.pdf" download data-hover-sound>PDF Download</a>
       </div>
     </div>
   </footer>
+
+  <!-- Project Blueprint Modal Dialog -->
+  <div class="modal-overlay" id="blueprintModal">
+    <div class="modal-container" data-tilt>
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="blueprint-tag">SYSTEM BLUEPRINT</span>
+          <h3 class="modal-project-title" id="modalTitle">PROJECT ARCHITECTURE</h3>
+        </div>
+        <button class="modal-close-btn" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected dynamically by script.js -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cyber-secondary" id="modalCloseBottom">CLOSE BLUEPRINT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local Offline-Ready Three.js Script -->
+  <script src="three.min.js"></script>
+  <!-- Fallback CDN in case three.min.js is not loaded -->
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
